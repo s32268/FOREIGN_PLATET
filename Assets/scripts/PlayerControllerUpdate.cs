@@ -37,6 +37,11 @@ public class PlayerControllerUpdate : MonoBehaviour
             anim.SetBool("Jump", true);
         }
         
+         if (Input.GetKeyDown(KeyCode.Q) && groundChecker.isGrounded)
+        {
+        
+            anim.SetBool("attack", true);
+        }
       
 
         if (moveVector != 0)
