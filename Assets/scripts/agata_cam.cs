@@ -7,13 +7,26 @@ public class SmoothFollow : MonoBehaviour
     public Transform target;
     public float smoothTime = 0.2f;
 
+    // NEW: vertical offset (negative = player lower on screen)
+    public float yOffset = -2f;
+
     private Vector3 velocity = Vector3.zero;
+
     private void LateUpdate()
     {
-        Vector3 targetPos = new Vector3(target.position.x,
-            target.position.y, transform.position.z);
+        if (!target) return;
 
-        transform.position = Vector3.SmoothDamp(transform.position, 
-            targetPos, ref velocity, smoothTime);
+        Vector3 targetPos = new Vector3(
+            target.position.x,
+            target.position.y + yOffset,
+            transform.position.z
+        );
+
+        transform.position = Vector3.SmoothDamp(
+            transform.position,
+            targetPos,
+            ref velocity,
+            smoothTime
+        );
     }
 }
