@@ -7,7 +7,6 @@ public class SmoothFollow : MonoBehaviour
     public Transform target;
     public float smoothTime = 0.2f;
 
-    // NEW: vertical offset (negative = player lower on screen)
     public float yOffset = -2f;
 
     private Vector3 velocity = Vector3.zero;

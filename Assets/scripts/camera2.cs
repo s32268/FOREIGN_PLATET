@@ -27,17 +27,12 @@ public class camera2 : MonoBehaviour
 
         Vector3 diff = target.position - transform.position;
 
-        //roznica pozycji gracza - kamera
+      
 
         float direction = Input.GetAxis("Horizontal");
 
-        // -1 = lewo, 1 = prawo, 0 = stoi
-
-        //Vector3 targetPos = new Vector3(target.position.x, target.position.y, target.position.z);
 
         Vector3 targetPos = target.position + new Vector3(LookAheadDistance * direction, 0, -10);
-
-        //przesumiecie kmeki w kierunku ruchu
 
         transform.position = Vector3.SmoothDamp(transform.position, targetPos, ref velocity, smoothTime);
 
