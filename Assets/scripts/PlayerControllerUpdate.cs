@@ -6,6 +6,7 @@ public class PlayerControllerUpdate : MonoBehaviour
     public float moveSpeed = 5f;
     public float runSpeed = 7f;
     public float jumpForce = 400f;
+    public int maxHealth = 3;
 
     private bool isSprint = false;
     private bool isJump = false;
