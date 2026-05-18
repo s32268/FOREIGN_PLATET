@@ -2068,7 +2068,6 @@ MonoBehaviour:
   moveSpeed: 50
   runSpeed: 30
   jumpForce: 2800
-  maxHealth: 3
   rb: {fileID: 1231155632}
   spriteRenderer: {fileID: 1231155633}
   groundChecker: {fileID: 54126033}
@@ -2088,6 +2087,7 @@ MonoBehaviour:
   respawnPosition: {fileID: 957136059}
   respawnDelay: 1.5
   maxHealth: 3
+  currentHealth: 0
   animator: {fileID: 1231155630}
   fallAnimationName: Fall
 --- !u!1 &1367205354
@@ -2770,6 +2770,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 4181383528022613731, guid: b7941858ef91c984f932e378dfc94ba9, type: 3}
   bulletPos: {fileID: 1972397760}
+  player: {fileID: 1231155629}
 --- !u!1 &1835018213
 GameObject:
   m_ObjectHideFlags: 0

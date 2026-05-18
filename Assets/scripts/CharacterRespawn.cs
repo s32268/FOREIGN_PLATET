@@ -6,7 +6,7 @@ public class CharacterRespawn : MonoBehaviour
     public Transform respawnPosition;  //Transform
     public float respawnDelay = 0f;  
     public int maxHealth = 3;
-    private int currentHealth;
+    public int currentHealth;
 
     [Header("Animation")]
     public Animator animator; 
@@ -22,7 +22,7 @@ private void Start()
        
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            //TODO: dodać logikę odjęcia 1 życia 
+           
            
             currentHealth -= 1;
             Debug.Log(currentHealth);
@@ -38,6 +38,17 @@ private void Start()
         }
     }
 
+    public void Damage(int amount)
+    {
+     currentHealth -= 1;
+    if (currentHealth <= 0)
+        {
+            animator.SetTrigger(fallAnimationName);
+            Invoke("Respawn", respawnDelay);
+            currentHealth = maxHealth;
+        }
+
+    }
  
     private void Respawn()
     {

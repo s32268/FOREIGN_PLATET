@@ -6,12 +6,14 @@ public class EnemyShooting : MonoBehaviour
 {
     public GameObject bullet;
     public Transform bulletPos;
+    public GameObject player;
+    private float distance = 1000;
     
     private float timer;
     // Start is called before the first frame update
     void Start()
     {
-        //shooting range dla przeciwnika
+        
         player = GameObject.FindGameObjectWithTag("Player");
     }
 
@@ -20,16 +22,18 @@ public class EnemyShooting : MonoBehaviour
     {
 
         //shooting range i wykrywanie gracza
-        float distance = Vector2.Distance(transform.position, player.transform.position);
-        Debug.Log(distance); //zeby znac dystans
+        distance = Vector2.Distance(transform.position, player.transform.position);
+        
 
-        if(distance < 10)
-        {
+        if(distance < 100)
+        { 
+            
              timer += Time.deltaTime;
 
             //timer strzałów
             if(timer > 2)
             {
+                Debug.Log(timer);
                 timer = 0;
                 shoot();
             }
@@ -42,5 +46,14 @@ public class EnemyShooting : MonoBehaviour
     void shoot()
     {
         Instantiate(bullet, bulletPos.position, Quaternion.identity);
+    }
+
+     void OnDrawGizmos()
+    {
+        if(distance < 100)
+        {
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawLine(transform.position, player.transform.position);
+        }
     }
 }
