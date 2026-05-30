@@ -40,7 +40,8 @@ private void Start()
 
     public void Damage(int amount)
     {
-     currentHealth -= 1;
+        currentHealth -= amount;
+        
     if (currentHealth <= 0)
         {
             animator.SetTrigger(fallAnimationName);

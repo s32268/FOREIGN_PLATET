@@ -7,7 +7,7 @@ public class PortalTrigger : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            SceneManager.LoadScene("Ending");
+            SceneManager.LoadScene("Scene2");
         }
     }
 }
