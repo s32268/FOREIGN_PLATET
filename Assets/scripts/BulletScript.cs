@@ -38,7 +38,7 @@ public class BulletScript : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            other.gameObject.GetComponent<CharacterRespawn>().currentHealth -= 1; //do odjęcia punktu życia, tylko że jest ref to float health i idk jak to sie u mnie nazywa nie mogę tego znalezc
+            other.gameObject.GetComponent<CharacterRespawn>().Damage(1);//do odjęcia punktu życia, tylko że jest ref to float health i idk jak to sie u mnie nazywa nie mogę tego znalezc
             Destroy(gameObject);
         }
     }

@@ -25,13 +25,13 @@ public class EnemyShooting : MonoBehaviour
         distance = Vector2.Distance(transform.position, player.transform.position);
         
 
-        if(distance < 100)
+        if(distance < 70) //co zrobić żeby preciwnik z góry nie strzelali
         { 
             
              timer += Time.deltaTime;
 
             //timer strzałów
-            if(timer > 2)
+            if(timer > 3)
             {
                 Debug.Log(timer);
                 timer = 0;
