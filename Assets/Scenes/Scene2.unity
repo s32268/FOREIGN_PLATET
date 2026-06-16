@@ -659,6 +659,7 @@ GameObject:
   - component: {fileID: 226483043}
   - component: {fileID: 226483042}
   - component: {fileID: 226483046}
+  - component: {fileID: 226483047}
   m_Layer: 0
   m_Name: Bby 1
   m_TagString: Enemy
@@ -814,6 +815,19 @@ MonoBehaviour:
   bullet: {fileID: 4181383528022613731, guid: b7941858ef91c984f932e378dfc94ba9, type: 3}
   bulletPos: {fileID: 226483045}
   player: {fileID: 1231155629}
+--- !u!114 &226483047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 226483041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce35948c8a0ac784ab3543745aebd9e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  detectionRange: 15
 --- !u!1 &347849734
 GameObject:
   m_ObjectHideFlags: 0
@@ -911,6 +925,7 @@ GameObject:
   - component: {fileID: 510299784}
   - component: {fileID: 510299785}
   - component: {fileID: 510299786}
+  - component: {fileID: 510299787}
   m_Layer: 0
   m_Name: Bby 3
   m_TagString: Enemy
@@ -1066,6 +1081,19 @@ MonoBehaviour:
   speed: 20
   leftLimit: 232
   rightLimit: 261
+--- !u!114 &510299787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 510299781}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce35948c8a0ac784ab3543745aebd9e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  detectionRange: 15
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -25781,6 +25809,7 @@ GameObject:
   - component: {fileID: 1911288480}
   - component: {fileID: 1911288479}
   - component: {fileID: 1911288482}
+  - component: {fileID: 1911288483}
   m_Layer: 6
   m_Name: Boss
   m_TagString: boss
@@ -25961,7 +25990,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 3
-  attackRange: 200
+  attackRange: 30
+--- !u!114 &1911288483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1911288476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2c56d8c5a692f447a33d75b367bbd40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 4181383528022613731, guid: b7941858ef91c984f932e378dfc94ba9, type: 3}
+  bulletPos: {fileID: 1911288478}
+  player: {fileID: 1231155629}
 --- !u!1 &1945289545
 GameObject:
   m_ObjectHideFlags: 0

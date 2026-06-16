@@ -25,7 +25,7 @@ public class EnemyShooting : MonoBehaviour
         distance = Vector2.Distance(transform.position, player.transform.position);
         
 
-        if(distance < 70) //co zrobić żeby preciwnik z góry nie strzelali
+        if(distance < 90) //co zrobić żeby preciwnik z góry nie strzelali
         { 
             
              timer += Time.deltaTime;

@@ -1025,6 +1025,7 @@ GameObject:
   - component: {fileID: 704512501}
   - component: {fileID: 704512502}
   - component: {fileID: 704512503}
+  - component: {fileID: 704512504}
   m_Layer: 0
   m_Name: Smallbug_patrol
   m_TagString: Enemy
@@ -1181,6 +1182,19 @@ MonoBehaviour:
   speed: 13
   leftLimit: 243
   rightLimit: 278
+--- !u!114 &704512504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 704512498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce35948c8a0ac784ab3543745aebd9e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  detectionRange: 15
 --- !u!1 &713341518
 GameObject:
   m_ObjectHideFlags: 0
@@ -1278,6 +1292,7 @@ GameObject:
   - component: {fileID: 715872438}
   - component: {fileID: 715872437}
   - component: {fileID: 715872436}
+  - component: {fileID: 715872441}
   m_Layer: 0
   m_Name: Smallbug_shooting (1)
   m_TagString: Enemy
@@ -1427,13 +1442,26 @@ Transform:
   m_GameObject: {fileID: 715872435}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 176, y: 147.1, z: -0.4114}
+  m_LocalPosition: {x: 175.9, y: 130.4, z: -0.4114}
   m_LocalScale: {x: -0.96319985, y: 0.9419939, z: 0.9936105}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 944467827}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &715872441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 715872435}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce35948c8a0ac784ab3543745aebd9e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  detectionRange: 15
 --- !u!1 &788431387
 GameObject:
   m_ObjectHideFlags: 0
@@ -1531,6 +1559,7 @@ GameObject:
   - component: {fileID: 797489741}
   - component: {fileID: 797489740}
   - component: {fileID: 797489739}
+  - component: {fileID: 797489744}
   m_Layer: 0
   m_Name: Smallbug_patrol (1)
   m_TagString: Enemy
@@ -1687,6 +1716,19 @@ Transform:
   - {fileID: 645536345}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &797489744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 797489738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce35948c8a0ac784ab3543745aebd9e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  detectionRange: 15
 --- !u!1 &807584775
 GameObject:
   m_ObjectHideFlags: 0
@@ -2896,6 +2938,7 @@ GameObject:
   - component: {fileID: 1753027625}
   - component: {fileID: 1753027624}
   - component: {fileID: 1753027628}
+  - component: {fileID: 1753027629}
   m_Layer: 0
   m_Name: Smallbug_shooting
   m_TagString: Enemy
@@ -3052,6 +3095,19 @@ MonoBehaviour:
   bullet: {fileID: 4181383528022613731, guid: b7941858ef91c984f932e378dfc94ba9, type: 3}
   bulletPos: {fileID: 1972397760}
   player: {fileID: 1231155629}
+--- !u!114 &1753027629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1753027622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce35948c8a0ac784ab3543745aebd9e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  detectionRange: 15
 --- !u!1 &1835018213
 GameObject:
   m_ObjectHideFlags: 0
@@ -3296,8 +3352,8 @@ Transform:
   m_GameObject: {fileID: 1866115016}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 199.9922, y: 122.9964, z: -0.0189}
-  m_LocalScale: {x: 21.476969, y: 3.703383, z: 0.9936105}
+  m_LocalPosition: {x: 198.1515, y: 122.9964, z: -0.0189}
+  m_LocalScale: {x: 28.311785, y: 3.703383, z: 0.9936105}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
