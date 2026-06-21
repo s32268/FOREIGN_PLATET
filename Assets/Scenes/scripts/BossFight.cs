@@ -3,7 +3,9 @@ using System.Collections;
 
 public class BossHealth : MonoBehaviour
 {
-    public int health = 3;
+    public int maxHealth = 3;
+    public int health;
+
     public float attackRange = 2f;
 
     private GameObject mc;
@@ -15,6 +17,8 @@ public class BossHealth : MonoBehaviour
 
     void Start()
     {
+        health = maxHealth;
+
         mc = GameObject.Find("mc");
 
         if (mc != null)
@@ -32,7 +36,6 @@ public class BossHealth : MonoBehaviour
 
         AnimatorStateInfo state = mcAnimator.GetCurrentAnimatorStateInfo(0);
 
-        // Player is attacking and close enough
         if (state.IsName("Attack") && distance <= attackRange)
         {
             if (!alreadyHitThisAttack)
@@ -43,7 +46,6 @@ public class BossHealth : MonoBehaviour
         }
         else
         {
-            // Reset when attack animation ends
             alreadyHitThisAttack = false;
         }
     }
@@ -61,17 +63,16 @@ public class BossHealth : MonoBehaviour
     }
 
     IEnumerator Die()
-{
-    isDead = true;
-
-    if (bossAnimator != null)
     {
-        bossAnimator.Play("Death");
+        isDead = true;
+
+        if (bossAnimator != null)
+        {
+            bossAnimator.Play("Death");
+        }
+
+        yield return new WaitForSeconds(1.7f);
+
+        Destroy(gameObject);
     }
-
-    // Wait 2 seconds, regardless of animation length
-    yield return new WaitForSeconds(1.7f);
-
-    Destroy(gameObject);
-}
 }
